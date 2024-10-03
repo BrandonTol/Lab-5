@@ -1,0 +1,155 @@
+1. Kilometer Converter
+
+kilometers = int(input("Enter a distance in kilometers: "))
+
+miles = kilometers * 0.6214
+print(f"{kilometers} kilometers is equivalent to {miles} miles.")
+
+--------------------------------------------------------------------
+
+2. Sales Tax Program Refactoring
+
+
+
+-------------------------------------------------------------------
+
+3. How Much Insurance?
+
+replacement_cost = float(input("Enter the replacement cost of the building: $"))
+
+insurance_amount = replacement_cost * 0.80
+
+print(f"The minimum amount of insurance you should buy for the property is: ${insurance_amount:,.2f}")
+
+----------------------------------------------------------------------
+
+4. Automobile Costs
+
+loan_payment = float(input("Enter the monthly loan payment: $"))
+insurance = float(input("Enter the monthly insurance cost: $"))
+gas = float(input("Enter the monthly gas cost: $"))
+oil = float(input("Enter the monthly oil cost: $"))
+tires = float(input("Enter the monthly tires cost: $"))
+maintenance = float(input("Enter the monthly maintenance cost: $"))
+
+total_monthly_cost = loan_payment + insurance + gas + oil + tires + maintenance
+
+total_annual_cost = total_monthly_cost * 12
+
+print(f"\nThe total monthly cost of these expenses is: ${total_monthly_cost:,.2f}")
+print(f"The total annual cost of these expenses is: ${total_annual_cost:,.2f}")
+
+---------------------------------------------------------------------
+
+5. Property Tax
+
+ASSESSMENT_RATE = 0.60  # 60% of actual value
+TAX_RATE = 0.72  # 72 cents per $100 of assessed value
+
+actual_value = float(input("Enter the actual value of the property: $"))
+
+assessment_value = actual_value * ASSESSMENT_RATE
+
+property_tax = (assessment_value / 100) * TAX_RATE
+
+print(f"\nThe assessment value of the property is: ${assessment_value:,.2f}")
+print(f"The property tax is: ${property_tax:,.2f}")
+
+----------------------------------------------------------------------
+
+6. Stadium Seating
+
+CLASS_A_COST = 20.00
+CLASS_B_COST = 15.00
+CLASS_C_COST = 10.00
+
+class_a_tickets = int(input("Enter the number of Class A tickets sold: "))
+class_b_tickets = int(input("Enter the number of Class B tickets sold: "))
+class_c_tickets = int(input("Enter the number of Class C tickets sold: "))
+
+income_a = class_a_tickets * CLASS_A_COST
+income_b = class_b_tickets * CLASS_B_COST
+income_c = class_c_tickets * CLASS_C_COST
+
+total_income = income_a + income_b + income_c
+
+print(f"\nIncome generated from Class A tickets: ${income_a:,.2f}")
+print(f"Income generated from Class B tickets: ${income_b:,.2f}")
+print(f"Income generated from Class C tickets: ${income_c:,.2f}")
+print(f"\nTotal income generated from ticket sales: ${total_income:,.2f}")
+
+-----------------------------------------------------------------------
+
+7. Paint Job Estimator
+
+SQUARE_FEET_PER_GALLON = 112
+HOURS_PER_GALLON = 8
+LABOR_COST_PER_HOUR = 35.00
+
+square_feet = float(input("Enter the square feet of wall space to be painted: "))
+paint_price_per_gallon = float(input("Enter the price of the paint per gallon: "))
+
+gallons_of_paint = square_feet / SQUARE_FEET_PER_GALLON
+hours_of_labor = (gallons_of_paint * HOURS_PER_GALLON)
+cost_of_paint = gallons_of_paint * paint_price_per_gallon
+labor_charges = hours_of_labor * LABOR_COST_PER_HOUR
+total_cost = cost_of_paint + labor_charges
+
+print(f"Gallons of paint required: {gallons_of_paint:.2f}")
+print(f"Hours of labor required: {hours_of_labor:.2f}")
+print(f"Cost of
+
+--------------------------------------------------------------------------
+
+8. Monthly Sales Tax
+
+# Define constants
+STATE_TAX_RATE = 0.05
+COUNTY_TAX_RATE = 0.025
+
+total_sales = float(input("Enter the total sales for the month: "))
+
+county_sales_tax = total_sales * COUNTY_TAX_RATE
+state_sales_tax = total_sales * STATE_TAX_RATE
+total_sales_tax = county_sales_tax + state_sales_tax
+
+print(f"Total sales: ${total_sales:.2f}")
+print(f"County sales tax: ${county_sales_tax:.2f}")
+print(f"State sales tax: ${state_sales_tax:.2f}")
+print(f"Total sales tax: ${total_sales_tax:.2f}")
+
+--------------------------------------------------------------------------
+
+9. Feet to Inches
+
+def feet_to_inches(feet):
+    return feet * 12  # 1 foot = 12 inches
+
+def main():
+    feet = float(input("Enter the number of feet: "))
+    inches = feet_to_inches(feet)
+    
+    print(f"{feet} feet is equal to {inches:.2f} inches.")
+
+main()
+
+-------------------------------------------------------------------------
+
+10. Math Quit
+
+import random
+
+num1 = random.randint(1, 500)
+num2 = random.randint(1, 500)
+    
+print(f"  {num1}")
+print(f"+ {num2}")
+    
+user_answer = int(input("Enter your answer: "))
+    
+correct_answer = num1 + num2
+    
+if user_answer == correct_answer:
+    print("Congratulations! Your answer is correct.")
+else:
+    print(f"Sorry, the correct answer is {correct_answer}.")

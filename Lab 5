@@ -9,7 +9,43 @@ print(f"{kilometers} kilometers is equivalent to {miles} miles.")
 
 2. Sales Tax Program Refactoring
 
+state_tax_rate = 0.05
+county_tax_rate = 0.025
 
+def get_purchase_amount():
+    return float(input("enter the amount of the purchase: $"))
+
+def calculate_state_sales_tax(purchase_amount):
+    return purchase_amount * state_tax_rate
+
+def calculate_county_sales_tax(purchase_amount):
+    return purchase_amount * county_tax_rate
+
+def calculate_total_sales_tax(state_sales_tax, county_sales_tax):
+    return state_sales_tax + county_sales_tax
+
+def calculate_total_sale(purchase_amount, total_sales_tax):
+    return purchase_amount + total_sales_tax
+
+def display_summary(purchase_amount, state_sales_tax, county_sales_tax, total_sales_tax, total_sale):
+    print("\n--- sales summary ---")
+    print(f"purchase amount: ${purchase_amount:.2f}")
+    print(f"state sales tax: ${state_sales_tax:.2f}")
+    print(f"county sales tax: ${county_sales_tax:.2f}")
+    print(f"total sales tax: ${total_sales_tax:.2f}")
+    print(f"total of the sale: ${total_sale:.2f}")
+
+def main():
+    purchase_amount = get_purchase_amount()
+
+    state_sales_tax = calculate_state_sales_tax(purchase_amount)
+    county_sales_tax = calculate_county_sales_tax(purchase_amount)
+    total_sales_tax = calculate_total_sales_tax(state_sales_tax, county_sales_tax)
+    total_sale = calculate_total_sale(purchase_amount, total_sales_tax)
+
+    display_summary(purchase_amount, state_sales_tax, county_sales_tax, total_sales_tax, total_sale)
+
+main()
 
 -------------------------------------------------------------------
 
